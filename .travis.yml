@@ -28,11 +28,12 @@ install:
   - source activate test-environment
   - python setup.py install
   - pip install coveralls
-  - pip install pytest-cov pytest-mpl
+  - pip install pytest-cov
+  - pip install pytest-mpl
   - py.test --version
 # command to run tests
 script: 
-  - py.test --cov=lifetimes tests/
+  - py.test --cov lifetimes tests/
 after_success:
   coveralls
 # Don't want notifications
