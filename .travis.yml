@@ -29,9 +29,10 @@ install:
   - python setup.py install
   - pip install coveralls
   - pip install pytest-cov pytest-mpl
+  - py.test --version
 # command to run tests
 script: 
-  - py.test --cov=lifetimes --mpl --mpl-baseline-path=tests/reference_plots/ tests/
+  - py.test --cov=lifetimes tests/
 after_success:
   coveralls
 # Don't want notifications
