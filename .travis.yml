@@ -29,11 +29,11 @@ install:
   - python setup.py install
   - pip install coveralls
   - pip install pytest-cov
-  - pip install pytest-mpl
   - py.test --version
+  - ls tests
 # command to run tests
 script: 
-  - py.test --cov lifetimes tests/
+  - py.test --cov lifetimes
 after_success:
   coveralls
 # Don't want notifications
